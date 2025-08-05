@@ -1,215 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Manual do Direito – Notícias e Artigos Jurídicos</title>
-<meta name="description" content="Notícias jurídicas, artigos explicativos e atualizações legislativas. Conteúdo claro e confiável para estudantes e profissionais do Direito." />
-<meta name="author" content="Manual do Direito" />
-<meta name="robots" content="index, follow" />
-
-<style>
-  /* Reset básico */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0; padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #222;
-    line-height: 1.6;
-  }
-  header {
-    background-color: #004080;
-    color: #fff;
-    padding: 1.5rem 2rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-  }
-  nav {
-    margin-top: 0.5rem;
-  }
-  nav a {
-    color: #b3d4fc;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  nav a:hover {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  main {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  /* Grid de cards */
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 1.5rem;
-  }
-
-  .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
-  }
-  .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem 0;
-    color: #004080;
-    text-decoration: none;
-  }
-  .card-title:hover {
-    text-decoration: underline;
-  }
-  .card-excerpt {
-    flex-grow: 1;
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  .card-footer {
-    font-size: 0.85rem;
-    color: #888;
-    text-align: right;
-  }
-
-  /* Footer */
-  footer {
-    background-color: #004080;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-  }
-
-  /* Responsividade */
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 1.4rem;
-    }
-    nav a {
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-  }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Direito Online - Conteúdo Jurídico de Qualidade</title>
+    <meta name="description" content="Conteúdo jurídico de qualidade para estudantes e profissionais do direito. Artigos, análises e materiais de estudo atualizados.">
+    <meta property="og:title" content="Manual do Direito Online">
+    <meta property="og:description" content="Conteúdo jurídico de qualidade para estudantes e profissionais do direito.">
+    <meta property="og:image" content="https://manualdodireito.online/images/logo.png">
+    <meta property="og:url" content="https://manualdodireito.online">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://manualdodireito.online">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <h1>Manual do Direito</h1>
-  <nav>
-    <a href="#">Início</a>
-    <a href="#">Notícias</a>
-    <a href="#">Artigos</a>
-    <a href="#">Legislação</a>
-    <a href="#">Jurisprudência</a>
-    <a href="#">Contato</a>
-  </nav>
-</header>
-
-<main>
-  <section>
-    <h2>Últimas Notícias</h2>
-    <div class="cards-container">
-      <article class="card">
-        <img src="https://via.placeholder.com/400x160?text=Notícia+1" alt="Imagem da Notícia 1" />
-        <div class="card-content">
-          <a href="#" class="card-title">STF decide sobre repercussão geral em novo caso de direito civil</a>
-          <p class="card-excerpt">Decisão recente do Supremo Tribunal Federal impacta diretamente o entendimento sobre contratos civis no Brasil.</p>
-          <div class="card-footer">10 de agosto de 2025</div>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="/">Manual do Direito</a></h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="Abrir menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="/" class="nav-link active">Início</a></li>
+                        <li><a href="/sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="/categorias.html" class="nav-link">Categorias</a></li>
+                        <li><a href="/contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </article>
+    </header>
 
-      <article class="card">
-        <img src="https://via.placeholder.com/400x160?text=Notícia+2" alt="Imagem da Notícia 2" />
-        <div class="card-content">
-          <a href="#" class="card-title">Projeto de lei altera regras do Código de Processo Civil</a>
-          <p class="card-excerpt">Parlamentares propõem mudanças importantes para acelerar tramitação de ações judiciais.</p>
-          <div class="card-footer">8 de agosto de 2025</div>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Conteúdo Jurídico de Qualidade</h2>
+                    <p class="hero-description">Artigos, análises e materiais de estudo para estudantes e profissionais do direito</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="posts-section">
+            <div class="container">
+                <h2 class="section-title">Últimos Artigos</h2>
+                <div id="latest-posts" class="posts-grid">
+                    <!-- Posts serão carregados aqui via JavaScript -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/placeholder-post.jpg" alt="Imagem do post" loading="lazy">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">15 de Janeiro, 2025</span>
+                                <span class="post-category">Direito Civil</span>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="/posts/exemplo-post.html">Exemplo de Post Jurídico</a>
+                            </h3>
+                            <p class="post-excerpt">Este é um exemplo de como os posts aparecerão no site. O conteúdo será carregado dinamicamente através do CMS.</p>
+                            <a href="/posts/exemplo-post.html" class="read-more">Ler mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Manual do Direito Online</h3>
+                    <p>Conteúdo jurídico de qualidade para estudantes e profissionais do direito.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="/sobre.html">Sobre</a></li>
+                        <li><a href="/categorias.html">Categorias</a></li>
+                        <li><a href="/contato.html">Contato</a></li>
+                        <li><a href="/admin">Painel Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Manual do Direito Online. Todos os direitos reservados.</p>
+            </div>
         </div>
-      </article>
+    </footer>
 
-      <article class="card">
-        <img src="https://via.placeholder.com/400x160?text=Notícia+3" alt="Imagem da Notícia 3" />
-        <div class="card-content">
-          <a href="#" class="card-title">Jurisprudência do STJ reforça direitos do consumidor em contratos digitais</a>
-          <p class="card-excerpt">Análise detalhada das últimas decisões que beneficiam consumidores em contratos eletrônicos.</p>
-          <div class="card-footer">7 de agosto de 2025</div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section style="margin-top: 3rem;">
-    <h2>Artigos Recentes</h2>
-    <div class="cards-container">
-      <article class="card">
-        <img src="https://via.placeholder.com/400x160?text=Artigo+1" alt="Imagem do Artigo 1" />
-        <div class="card-content">
-          <a href="#" class="card-title">Entenda o princípio do contraditório no processo civil</a>
-          <p class="card-excerpt">Um guia completo para compreender a importância do contraditório na tutela jurisdicional.</p>
-          <div class="card-footer">5 de agosto de 2025</div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://via.placeholder.com/400x160?text=Artigo+2" alt="Imagem do Artigo 2" />
-        <div class="card-content">
-          <a href="#" class="card-title">Análise do artigo 49 do CDC: direito ao arrependimento</a>
-          <p class="card-excerpt">Como o artigo 49 do Código de Defesa do Consumidor protege o comprador em compras online.</p>
-          <div class="card-footer">3 de agosto de 2025</div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://via.placeholder.com/400x160?text=Artigo+3" alt="Imagem do Artigo 3" />
-        <div class="card-content">
-          <a href="#" class="card-title">Atualizações jurisprudenciais no Direito do Trabalho em 2025</a>
-          <p class="card-excerpt">Principais decisões recentes que influenciam as relações de trabalho e seus direitos.</p>
-          <div class="card-footer">1 de agosto de 2025</div>
-        </div>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2025 Manual do Direito – Centro de Estudos Jurídicos | Desenvolvido por Junior
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
+

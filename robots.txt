@@ -1,0 +1,72 @@
+User-agent: *
+Allow: /
+
+# Bloquear acesso ao painel administrativo
+Disallow: /admin/
+Disallow: /admin/*
+
+# Bloquear arquivos de configuração
+Disallow: /netlify.toml
+Disallow: /.netlify/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Permitir acesso aos recursos importantes
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /posts/
+Allow: /sitemap.xml
+
+# Sitemap
+Sitemap: https://manualdodireito.online/sitemap.xml
+
+# Crawl-delay para bots específicos
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 2
+
+# Bloquear bots indesejados
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Permitir bots de redes sociais
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Configurações específicas para o Google
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-News
+Allow: /posts/
+Allow: /
+
+# Informações adicionais
+# Host: https://manualdodireito.online
+# Este site contém conteúdo jurídico educacional
+# Última atualização: 2025-01-15
+
