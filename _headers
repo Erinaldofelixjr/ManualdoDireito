@@ -1,0 +1,71 @@
+# Headers globais de segurança
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none';
+
+# Headers para arquivos CSS
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css
+
+# Headers para arquivos JavaScript
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript
+
+# Headers para imagens
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+# Headers para HTML
+/*.html
+  Cache-Control: public, max-age=3600
+  Content-Type: text/html; charset=utf-8
+
+# Headers para o painel administrativo
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Headers para arquivos de configuração
+/manifest.json
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Content-Type: application/xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=86400
+
+# Headers para feeds RSS (se implementado)
+/feed.xml
+  Content-Type: application/rss+xml
+  Cache-Control: public, max-age=3600
+
+# Headers para API endpoints (se implementado)
+/api/*
+  Content-Type: application/json
+  Cache-Control: no-cache
+  Access-Control-Allow-Origin: https://manualdodireito.online
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization
+
+# Headers específicos para posts
+/posts/*
+  Cache-Control: public, max-age=7200
+  Vary: Accept-Encoding
+
+# Headers para categorias
+/categoria/*
+  Cache-Control: public, max-age=7200
+  Vary: Accept-Encoding
+

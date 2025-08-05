@@ -1,0 +1,108 @@
+[build]
+  publish = "."
+  command = "echo 'Site estático - sem build necessário'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Configurações de redirecionamento e HTTPS
+[[redirects]]
+  from = "http://manualdodireito.online/*"
+  to = "https://manualdodireito.online/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.manualdodireito.online/*"
+  to = "https://manualdodireito.online/:splat"
+  status = 301
+  force = true
+
+# Redirecionamento para SPA (Single Page Application) - caso necessário
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Headers de segurança
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Headers para arquivos estáticos
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers para HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Configuração do Netlify Identity
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# Configurações do CMS
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# Configurações de formulários (caso necessário)
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Configurações de deploy
+[context.deploy-preview]
+  command = "echo 'Deploy preview'"
+
+[context.branch-deploy]
+  command = "echo 'Branch deploy'"
+
+# Configurações de Edge Functions (se necessário)
+[functions]
+  directory = "netlify/functions"
+
+# Configurações de plugins
+[[plugins]]
+  package = "netlify-plugin-sitemap"
+  
+  [plugins.inputs]
+    baseUrl = "https://manualdodireito.online"
+    pretty = true
+    trailingSlash = false
+
