@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manual do Direito – Notícias e Artigos Jurídicos</title>
+<meta name="description" content="Notícias jurídicas, artigos explicativos e atualizações legislativas. Conteúdo claro e confiável para estudantes e profissionais do Direito." />
+<meta name="author" content="Manual do Direito" />
+<meta name="robots" content="index, follow" />
+
+<style>
+  /* Reset básico */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #004080;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    color: #b3d4fc;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Grid de cards */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #004080;
+    text-decoration: none;
+  }
+  .card-title:hover {
+    text-decoration: underline;
+  }
+  .card-excerpt {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .card-footer {
+    font-size: 0.85rem;
+    color: #888;
+    text-align: right;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #004080;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+
+  /* Responsividade */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.4rem;
+    }
+    nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+
+</style>
+</head>
+<body>
+<header>
+  <h1>Manual do Direito</h1>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Notícias</a>
+    <a href="#">Artigos</a>
+    <a href="#">Legislação</a>
+    <a href="#">Jurisprudência</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Últimas Notícias</h2>
+    <div class="cards-container">
+      <article class="card">
+        <img src="https://via.placeholder.com/400x160?text=Notícia+1" alt="Imagem da Notícia 1" />
+        <div class="card-content">
+          <a href="#" class="card-title">STF decide sobre repercussão geral em novo caso de direito civil</a>
+          <p class="card-excerpt">Decisão recente do Supremo Tribunal Federal impacta diretamente o entendimento sobre contratos civis no Brasil.</p>
+          <div class="card-footer">10 de agosto de 2025</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/400x160?text=Notícia+2" alt="Imagem da Notícia 2" />
+        <div class="card-content">
+          <a href="#" class="card-title">Projeto de lei altera regras do Código de Processo Civil</a>
+          <p class="card-excerpt">Parlamentares propõem mudanças importantes para acelerar tramitação de ações judiciais.</p>
+          <div class="card-footer">8 de agosto de 2025</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/400x160?text=Notícia+3" alt="Imagem da Notícia 3" />
+        <div class="card-content">
+          <a href="#" class="card-title">Jurisprudência do STJ reforça direitos do consumidor em contratos digitais</a>
+          <p class="card-excerpt">Análise detalhada das últimas decisões que beneficiam consumidores em contratos eletrônicos.</p>
+          <div class="card-footer">7 de agosto de 2025</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="margin-top: 3rem;">
+    <h2>Artigos Recentes</h2>
+    <div class="cards-container">
+      <article class="card">
+        <img src="https://via.placeholder.com/400x160?text=Artigo+1" alt="Imagem do Artigo 1" />
+        <div class="card-content">
+          <a href="#" class="card-title">Entenda o princípio do contraditório no processo civil</a>
+          <p class="card-excerpt">Um guia completo para compreender a importância do contraditório na tutela jurisdicional.</p>
+          <div class="card-footer">5 de agosto de 2025</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/400x160?text=Artigo+2" alt="Imagem do Artigo 2" />
+        <div class="card-content">
+          <a href="#" class="card-title">Análise do artigo 49 do CDC: direito ao arrependimento</a>
+          <p class="card-excerpt">Como o artigo 49 do Código de Defesa do Consumidor protege o comprador em compras online.</p>
+          <div class="card-footer">3 de agosto de 2025</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/400x160?text=Artigo+3" alt="Imagem do Artigo 3" />
+        <div class="card-content">
+          <a href="#" class="card-title">Atualizações jurisprudenciais no Direito do Trabalho em 2025</a>
+          <p class="card-excerpt">Principais decisões recentes que influenciam as relações de trabalho e seus direitos.</p>
+          <div class="card-footer">1 de agosto de 2025</div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Manual do Direito – Centro de Estudos Jurídicos | Desenvolvido por Junior
+</footer>
+
+</body>
+</html>
